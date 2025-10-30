@@ -3,6 +3,6 @@ y = [True, False, False, True, "False", False, True, True, True, "True"]
 
 a = [n*2 for n in x]
 b = [n for n in x if n % 2 == 0]
-c = [n for n in y if n is True or n == "True"]
+c = [n for n in y if n]
 d = [n for n in y if isinstance(n, str)]
-e = [[[True] * n] for n in x if n % 2 != 0]
+e = [[True] * n for n in x if n % 2 != 0]
