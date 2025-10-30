@@ -23,20 +23,15 @@ def func2(*args):
         return func1(args[0], args[1])
     if numArgs > 2:
         return numArgs
-    return
     
 def func3(**kwargs):
     a = b = False
-    key1 = key2 = ""
     for key in kwargs:
         if key == "a":
             a = True
-            key1 = key
         elif key == "b":
             b = True
-            key2 = key
-    if a == True and b == True:
-        return func1(key1, key2)
+    if a and b:
+        return func1(kwargs["a"], kwargs["b"])
     else:
         return func2(kwargs)
-    return
