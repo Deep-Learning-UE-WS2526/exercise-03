@@ -9,6 +9,19 @@ def func1(a, b):
     return None
   return type(a)
 
+#2nd function here: taking any number of arguments -> number of args with len(args). 
+#This works bc *args stores all arguments in a tuple (ordered and immutable collection)
+def func2(*args):
+    match args:
+        case args if len(args) < 2:
+            return str(args)
+        case args if len(args) == 2:
+            func1(*args)
+        case args if len(args) > 2:
+            return list(map(int, args)) #apparently you do not use *args here
+            
+            
+#def func3(*args):    
 func1(1,2)
 func1("Welt", "Hallo")
 func1(None, None)
